@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="test.css"/>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="test.css"/>
     <style>
         body {background-color:#00CED1}
         h1{text-align: center; font-family:fantasy; font-size: x-large;}
         p{text-align:center}
         h6{text-align:center;}
         .largehover a:hover {font-size: 120%;}
-        .bg {background-color: papayawhip;}
-        div.bgcolor {background-color: palegoldenrod;}
+        .bg {background-color: peachpuff;}
+        div.color3 {background-color: palegoldenrod;}
         div.color1 {background-color: palegreen;}
         div.color2 {background-color: paleturquoise;}
         li ul {display: none;text-align: center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: large;}
-        li :hover ul{display: block;}
+        li:hover ul{display: block;}
         ul {list-style-type: disc;}
-        li {padding: 0px, auto, 0px, auto;}
+        li {padding: 0px, 0px, 0px, 0px;}
+        ol {list-style-position:inside;text-align: center;}
     </style>
-
-<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <p class='largehover'><h1>My Interests: 
+    <h1 class='largehover'>My Interests: 
         <a href="#anchor1">swimming</a>, 
         <a href="#anchor2">kayaking</a>,and
         <a href="#anchor3">poker</a>
-    </h1></p>
-    <!--Professor, my a:hover also is not working...-->
+    </h1>
     <div class='bg'>
     <p>My interests include:</p>
     <ol>
+        <div class='color1'>
         <li class='largerhover' id="anchor1">Swimming
             <ul>
                 <li>I used to be in Beijing Dongcheng's district swimming team</li>
             </ul>
         </li>
+        </div>
+        <div class='color2'>
         <li class='largerhover' id="anchor2">Kayaking
             <ul>
                 <li>I bought a inflatable kayak here and often go kayaking with my friends. <br> Watching the sun rise on Charles River is really relaxing</li>
             </ul>
         </li>
+        </div>
+        <div class='color3'>
         <li class='largehover' id="anchor3">Poker
             <ul>
                 <li>I Started playing poker once I got into Babson, and slowly begin to understand why a certain play style is able to earn money in the long run</li>
             </ul>
         </li>
+        </div>
     </ol>
-</div>
+    </div>
     <h6> <img src="https://media.wired.com/photos/5fbe703e534553a88817f988/4:3/w_2132,h_1599,c_limit/Sec_poker_914262206.jpg" alt="poker image" width="300" height="250"/><br> <h6>
     <p>The image below is a link to poker.com</p>
     <a href="https://poker.com"><img src="pokerweb.png" alt="pokerweb" width="300" height="250"/></a>
