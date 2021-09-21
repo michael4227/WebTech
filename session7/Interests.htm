@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="test.css"/>
+    <style>
+        body {background-color:#00CED1}
+        h1{text-align: center; font-family:fantasy; font-size: x-large;}
+        p{text-align:center}
+        h6{text-align:center;}
+        .largehover a:hover {font-size: 120%;}
+        .bg {background-color: peachpuff;}
+        div.color3 {background-color: palegoldenrod;}
+        div.color1 {background-color: palegreen;}
+        div.color2 {background-color: paleturquoise;}
+        li ul {display: none;text-align: center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: large;}
+        li:hover ul{display: block;}
+        ul {list-style-type: disc;}
+        li {padding: 0px 0px 0px 0px;}
+        ol {list-style-position:inside;text-align: center;}
+        div.popupbox {position:fixed; top: 10px; left: 20px; border: solid powderblue 2px}
+        .Nav_Bar {position: sticky; top: 0px; left: 0px; width: 100%;} 
+        .Nav_Bar ul {list-style-type: none; padding: 0; overflow: auto; background-color: rgb(13, 109, 219); border-radius: 5px;} 
+        .Nav_Bar li {float:left;} 
+        .Nav_Bar li a {display: inline-block; color: white; text-align: center; padding: 15px; text-decoration: none; min-width: 100px; font-weight:lighter;} 
+        .Nav_Bar a.Active {background-color:blue;} 
+        .Nav_Bar li a:hover,.Nav_Bar a.Active:hover {background-color: red;} 
+        .Nav_Bar .Dropdown_Content {display: none; position: absolute; background-color: rgb(50, 50, 50); min-width: 100px; z-index: 1; } 
+        .Nav_Bar .Dropdown_Content a {display: block; text-align: left;} 
+        .Nav_Bar li.Dropdown:hover .Dropdown_Content {display: block;} 
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class='largehover'>My Interests: 
+        <a href="#anchor1">swimming</a>, 
+        <a href="#anchor2">Fencing</a>,and
+        <a href="#anchor3">poker</a>
+    </h1>
+    <div class="Nav_Bar">
+        <ul>
+            <li><a href="Interests.htm" class="Active">Home</a></li>
+            <li class="Dropdown">
+              <a href="https://en.wikipedia.org/wiki/Swimming">Swimming</a>
+                <div class="Dropdown_Content">
+                    <a href="https://en.wikipedia.org/wiki/Michael_Phelps">Michael Phelps</a>
+                    <a href="https://en.wikipedia.org/wiki/Sun_Yang">Sun Yang</a>
+                </div>
+            </li>
+            <li class="Dropdown">
+                <a href="https://en.wikipedia.org/wiki/Fencing">Fencing</a>
+                  <div class="Dropdown_Content">
+                      <a href="https://en.wikipedia.org/wiki/Áron_Szilágyi">Áron_Szilágyi</a>
+                  </div>
+              </li>
+            <li class="Dropdown">
+                <a href="https://en.wikipedia.org/wiki/Poker">Poker</a>
+                  <div class="Dropdown_Content">
+                      <a href="https://en.wikipedia.org/wiki/Daniel_Negreanu">Daniel Negreanu</a>
+                  </div>
+              </li>
+              <li class="Dropdown">
+                <a href="https://www.searchenginejournal.com/alternative-search-engines/271409/">Search Engines</a>
+                  <div class="Dropdown_Content">
+                      <a href="http://www.google.com">Google</a>
+                      <a href="http://www.yahoo.com">Yahoo</a>
+                      <a href="http://www.bing.com">Bing</a>
+                  </div>
+              </li>
+          </ul>
+    </div>
+    <div class='popupbox'>
+        <p>Popup Box including:
+            Just some random text
+        </p>
+    </div>
+    <div class='bg'>
+    <p>My interests include:</p>
+    <ol>
+        <div class='color1'>
+        <li class='largerhover' id="anchor1">Swimming
+            <ul>
+                <li>I used to be in Beijing Dongcheng's district swimming team</li>
+            </ul>
+        </li>
+        </div>
+        <div class='color2'>
+        <li class='largerhover' id="anchor2">Fencing
+            <ul>
+                <li>Fencing is fun! I play Foil</li>
+            </ul>
+        </li>
+        </div>
+        <div class='color3'>
+        <li class='largehover' id="anchor3">Poker
+            <ul>
+                <li>I Started playing poker once I got into Babson, and slowly begin to understand why a certain play style is able to earn money in the long run</li>
+            </ul>
+        </li>
+        </div>
+    </ol>
+    </div>
+    <h6> <img src="https://media.wired.com/photos/5fbe703e534553a88817f988/4:3/w_2132,h_1599,c_limit/Sec_poker_914262206.jpg" alt="poker image" width="300" height="250"/><br></h6>
+    <p>The image below is a link to poker.com</p>
+    <a href="https://poker.com"><img src="pokerweb.png" alt="pokerweb" width="300" height="250"/></a>
+    <!--Hi this code is written by michael, testing special characters below-->
+    <hr>
+    &#8721;
+    &#8704;
+
+</body>
+</html>
