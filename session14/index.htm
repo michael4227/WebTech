@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MIS3690 Survey</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<script>
+		function processForm()
+		{	
+			var jsfname=document.getElementById("fname");
+			var jslname=document.getElementById("lname");
+			var jsi=document.getElementById("i");
+			var jsc=document.getElementById("c");
+			var jst=document.getElementById("t");
+			var jsf=document.getElementById("f");
+		if (jsfname.value=="")
+			{
+				alert("First name is required");
+				jsfname.focus();
+			}
+			else if (jslname.value=='')
+			{
+				alert("Last name is required");
+				jslname.focus();
+			}
+			else if (jsi.checked == false && jsc.checked == false && jst.checked == false  && jsf.checked == false)
+			{
+				alert("Fun Topic is required");
+			}
+			else if (document.getElementById('grad').value=='')
+				alert('Graduation Year is required')
+			else if (document.getElementById('grad').value < 2021 || document.getElementById('grad').value > 2024)
+				alert('Graduation Year must be between 2021 and 2024')
+			else
+			{
+				return true;
+			}
+			return false;
+		}
+
+	</script>
+	<style>
+	td {padding-right:40px}
+	</style>
+	
+</head>
+<body>
+	<h1>MIS3690 Student Survey</h1>	
+	<p>Please complete the following survey.  You must answer each question.  When you are done,
+	    please click on the Submit button.</p>
+
+	<form method="POST" action="mailer.php" id='form1' onsubmit='return processForm()'>
+		<p>First Name: <input type= "text" id='fname' name="firstname" maxlength="100"> Last Name: <input type= "text" id='lname' name="lastname" maxlength="100" ></p>
+		<p>Gender: Male <input type="radio" name="gender" value="male" /> Female <input type="radio" name="gender" value="female" checked="checked" /></p>
+		<p>What grade do you expect to receive?</p>
+			<select name='Grade'>
+				<option value="A">A</option>
+				<option value="B">B</option>
+				<option value="C">C</option>
+				<option value="D">D</option>
+				<option value="F">F</option>
+			</select>
+		<table>
+			<tr><td colspan='1' rowspan='4'>Which topic do you find to be fun?</td>
+				<td><input id='i' type="checkbox" name="Images" value="Images" /> Images</td>
+			</tr>
+			<tr><td><input id='c' type="checkbox" name="CSS" value="CSS" /> CSS</td>
+			</tr>
+			<tr><td><input id='t' type="checkbox" name="Tables" value="Tables" /> Tables</td>
+			</tr>
+			<tr><td><input id='f' type="checkbox" name="Forms" value="Forms" /> Forms</td>
+			</tr>
+		</table>
+		<p> When are you graduating? <input type="text" name="graduation" maxlength="4" id="grad"></p >
+		<textarea name="comments" rows="5" cols="29">Please add any comments you have</textarea><br>
+		<input type="submit" value="Submit" name="Submit" style="margin-left: 30px;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="reset" value="Reset" name="Reset">
+	</form>
+</body>
+</html>
