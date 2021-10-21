@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MIS3690 Survey</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<script>
+		// function rolldice()
+		// {	
+		// 	var die1= math.floor(1+math.random()*6);
+		// 	var die2 = math.floor(1+math.random()*6);
+		// 	var total = die1+die2
+		// 	var message = 'you have rolled '+die1+' and '+die2+' for a total of '+total+'.';
+		// 		if (die1==die2) {message = message + 'You have rolled doubles'}
+		// 	document.getElementById('m').innerHTML=message
+
+		// }
+
+		function randomposition()
+		{	
+			var toppx = Math.floor(Math.random()*501)+'px'
+			var leftpx = Math.floor(Math.random()*501)+'px'
+			var content = new Array ("Click Me", "<b>Move</b> Me", "Click Here", "Button", "Next")
+			var randnum = Math.floor(Math.random()*5)
+			// document.getElementsByClassName('button')[0].style.left=leftpx;
+			// document.getElementsByClassName('button')[0].style.top=toppx;
+			document.getElementById('m').style.top=toppx;
+			document.getElementById('m').style.left=leftpx;
+			document.getElementById('m').innerHTML=content[randnum];
+		}
+	</script>
+	<style>
+	</style>
+	
+</head>
+<body>
+	<!-- <button onclick="rollDice()">Roll Dice</button>
+	<p id="m">Waiting for your roll</p> -->
+	<!-- <button onclick="randomposition()" class = 'button'>Click Me</button> -->
+	<button onclick="randomposition()" id = 'm' style = 'position: absolute; top:0px; left:0px'>Click Me</button>
+</body>
+</html>
