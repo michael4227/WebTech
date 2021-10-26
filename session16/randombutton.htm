@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MIS3690 Survey</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<script>
+		var timer = null
+		function startAnimation() {
+  			if (!timer) 
+			  timer = setInterval("chgButton()",500);
+		}
+		function stopAnimation() {
+  			if (!timer) return false;
+			  clearInterval(timer);
+			  timer = null;
+		}
+		function chgButton()
+		{
+			var content = new Array ("Click Me", "<b>Move</b> Me", "Click Here", "Button", "Next")
+			var randnum = Math.floor(Math.random()*5)
+			var toppx = Math.floor(Math.random()*501)+'px'
+			var leftpx = Math.floor(Math.random()*501)+'px'
+			document.getElementById('m').style.top=toppx;
+			document.getElementById('m').style.left=leftpx;
+			document.getElementById('m').innerHTML=content[randnum];
+		}
+	</script>
+	<style>
+	</style>
+	
+</head>
+<body onload="startAnimation()">
+	<button onmousedown='stopAnimation()' id = 'm' style = 'position: absolute; top:0px; left:0px'>Click Me</button>
+</body>
+</html>

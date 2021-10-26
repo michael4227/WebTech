@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All About Michael</title>
+    <script>
+        var counter = 0
+        function ChgColor()
+        {
+            var bgColors = new Array("red, orange, yellow, green, blue, indigo, violet");
+            document.getElementById('hello').style.color=bgColors[counter];
+            counter = counter + 1
+            if(counter == bgColors.length)
+            {counter=0}
+            setTimeout('ChgColor()',500);
+        }
+    </script>
+    <style>
+        body {background-image:url('https://www.silversurfers.com/wp-content/uploads/2019/07/bigstock-Dark-Street-Night-Smog-And-Sm-296290222.jpg'); background-repeat: no-repeat; background-size:cover;}
+        h1{text-align: center; font-family:fantasy; font-size: x-large;}
+        h2{text-align: center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: large;}
+        p{text-align:center;line-height: 0.5cm;color: cornsilk;}
+        h6{text-align:center; border: 3px solid cornsilk; padding: 0cm;margin: 2cm;float: left; width: 25%;}
+        .trystyle{border:0px solid yellow; }
+        .headersty{color:cornsilk}
+    </style>
+</head>
+<body onload="ChgColor()">
+    <h1 id='hello' class='headersty'>Hello,</h1>
+    <h6> <img src="IMG_6520.JPG" alt="imageofmichael" width="400" height="250"> </h6>
+    <h1 class=headersty>Intro</h1>
+    <p class='trystyle'> My home town is Datong, Shanxi, but I grow up in Beijing. <br> My phone number is 7742908478, and I'm currently living in Needham.</p>
+    <h1 class=headersty>Saying Hi</h1>
+    <p class='trystyle'> Hello this is the second paragraph. Something interesting, let me tell a little joke.</p>
+        <hr>
+    <h2 class=headersty><i>What's Next?</i></h2>
+    <p>This is a link to my interests</p>
+    <a href="https://poker.com" target="_blank">Here</a>
+</body>
+</html>
