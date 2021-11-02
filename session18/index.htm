@@ -1,0 +1,55 @@
+<html lang="en"><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+	<title>Canvas Example</title>
+
+	<style>
+        canvas { border: 3px solid green; }
+	</style>
+	
+	<script>
+      function drawShape(){
+		// get the canvas element using the DOM
+		var canvas = document.getElementById('fundrawing');
+			// use getContext to use the canvas for drawing
+			var ctx = canvas.getContext('2d');
+			// Draw shapes
+			ctx.beginPath();
+			ctx.arc(350,150,20,0,Math.PI*2,true); // Outer circle
+			ctx.fillStyle="pink"
+			ctx.fill();
+			ctx.beginPath();
+			ctx.strokeStyle="pink"
+			ctx.lineWidth=3
+			ctx.moveTo(350,170);
+			ctx.lineTo(350,185);   // neck
+			ctx.lineTo(325,185);
+            ctx.lineTo(375,185);   // right shoulder
+            ctx.lineTo(375,245);   // right side
+            ctx.moveTo(325,185);
+            ctx.lineTo(325,245);   //left side
+            ctx.lineTo(375,245);   //botton side
+            ctx.fillRect(330,245,15,60); //left leg
+            ctx.fillRect(355,245,15,60); //right leg
+            ctx.moveTo(325,200); //top of left arm
+            ctx.lineTo(289,170);
+            ctx.lineTo(289,180);
+            ctx.lineTo(325,210);
+            ctx.moveTo(375,200); //top of right arm
+            ctx.lineTo(411,170);
+            ctx.lineTo(411,180);
+            ctx.lineTo(375,210);
+			ctx.stroke();
+            
+		}
+	</script>
+  </head>
+
+  <body data-new-gr-c-s-check-loaded="9.40.0" data-gr-ext-installed="">
+      <div style="width:700px; margin-left: auto; margin-right: auto;">
+     <canvas id="fundrawing" width="700" height="700"></canvas>
+     </div>
+     <button id="btn" style="position:absolute; top:750px; margin-left: 45%" onmousedown="drawShape()">Click Me</button>
+
+  
+
+</body></html>
