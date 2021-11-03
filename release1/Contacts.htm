@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael's Boston Experience</title>
+    <link rel="stylesheet" type="text/css" href="test.css" />
+    <style>
+        .Nav_Bar ul {
+            list-style-type: none;
+            padding: 0;
+            overflow: auto;
+            background-color: rgb(44, 69, 99);
+            border-radius: 5px;
+        }
+
+        .Nav_Bar a.Active {
+            background-color: rgb(11, 44, 104);
+        }
+
+        .audio {
+            float: right
+        }
+
+        .structure {
+            text-align: center;
+            float: unset;
+        }
+
+        .cell {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 50px;
+            padding-bottom: 50px
+        }
+
+        .fontstyleT {
+            font-family: Title;
+            color: rgb(28, 211, 243);
+            text-align: center;
+        }
+
+        thead {
+            border: ivory;
+            border-width: 2px;
+        }
+
+        .cell-right {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            -ms-transform: rotate(3deg);
+            -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+        }
+
+        .cell-left {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            -ms-transform: rotate(357deg);
+            -webkit-transform: rotate(357deg);
+            transform: rotate(357deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class='fontstyleT1'>Michael's Boston Experience</h1>
+    <div class="Nav_Bar">
+        <ul>
+            <li><a href="index.htm" class="active">Home</a></li>
+            <li class="Dropdown">
+                <a href="Shops.htm" class='active'>Shops</a>
+                <div class="Dropdown_Content">
+                    <a href="FoodSupplies.htm"><strong>Food Supplies</strong></a>
+                    <a href="Others.htm"><strong>Others</strong></a>
+                </div>
+            </li>
+            <li class="Dropdown">
+                <a href="Activities.htm" class='active'>Activities</a>
+                <div class="Dropdown_Content">
+                    <a href="Kayak.htm"><strong>Kayaking</strong></a>
+                    <a href="Strolling.htm"><strong>Strolling</strong></a>
+                    <a href="Skiing.htm"><strong>Skiing</strong></a>
+                </div>
+            </li>
+            <li><a href="Restaurants.htm" class='active' style="float: right;">Restaurants</a></li>
+            <li><a href="LP.htm" class='active' style="float: right;">Long Holiday Plans</a></li>
+            <li><a href="SP.htm" class='active' style="float: right;">Short Holiday Plans</a></li>
+            <li><a href="Apps.htm" class='active' style="float: right;">Frequent Used Apps</a>
+            </li>
+            <li><a href="AboutMe.htm" class='active' style="float: right;">About Me</a></li>
+            <li><a href="Contacts.htm" class='Active' style="float: right;">Contacts</a></li>
+            <li><a href="Credit.htm" class='active' style="float: right;">Credit Page</a></li>
+
+        </ul>
+    </div>
+    <h1 class=fontstyleT>Contact Me</h1>
+    <p style="width: 100%; font-size: 30px; text-align: center; float: unset" class='fontstyleT2'> 
+        If you want to reach out to me, please fill out this form. I will reply you as soon as I see the message</p>
+    <div class='fontstyleT'>
+    <!-- I changed the mailer email address in the mailer php document -->
+        <form method="POST" action="http://wtspring13sec2.babson.edu/gordon/mailer.php">
+            <label for='firstname'>First Name: (required)</label> <input type= "text" id = "firstname" maxlength="100" required> 
+            <label for='lastname'>Last Name: (required)</label><input type= "text" id="lastname" maxlength="100" required>
+            <p>Gender: Male <input type="radio" name="gender" value="male" /> Female <input type="radio" name="gender" value="female" checked="checked" /></p>
+            <p>Your Email Address: (required) <input type= "text" name="Email" maxlength="100" required>
+            <p>Do you like the design of this website?</p>
+            <select name='like/dislike'>
+                <option value="A">Really like</option>
+                <option value="B">Like</option>
+                <option value="C">Moderate</option>
+                <option value="D">Slightly dislike</option>
+                <option value="E">Disgusted by it</option>
+            </select>
+            <br>
+            <table style="text-align: left; padding-left: 550px;">
+                <tr><td colspan='1' rowspan='6'>Which topic do you find to be most helpful?</td>
+                    <td><input type="checkbox" name="Shops" value="Shops" /> Shops</td>
+                </tr>
+                <tr><td><input type="checkbox" name="Activities" value="Activities" /> Activities</td>
+                </tr>
+                <tr><td><input type="checkbox" name="Restaurants" value="Restaurants" /> Restaurants</td>
+                </tr>
+                <tr><td><input type="checkbox" name="Long Holiday Plans" value="Long Holiday Plans" /> Long Holiday Plans</td>
+                </tr>
+                <tr><td><input type="checkbox" name="Short Holiday Plans" value="Short Holiday Plans" /> Short Holiday Plans</td>
+                </tr>
+                <tr><td><input type="checkbox" name="Frequent Used Apps" value="Frequent Used Apps" /> Frequent Used Apps</td>
+                </tr>
+            </table>
+            <textarea name="comments" rows="5" cols="29">Leave me a message:</textarea><br>
+            <input type="submit" value="Submit" name="Submit" style="margin-left: 30px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Reset" name="Reset">
+        </form>
+    </div>
+
+        
+
+    <div class="fontstyleT"
+        style="background-color: rgba(182, 206, 200, 0.55); background-blend-mode:darken; color: rgb(35, 206, 212);">
+        <p>Honor Code</p>
+        <p style="color: silver; float: left;"><em>“I have abided by the <strong><span>Babson</span> Code of
+                    Ethics</strong> in this work and pledge to be better than that which would compromise my
+                integrity.”</em></p>
+        <audio controls autoplay class='audio' style="float: right;">
+            <source src="Guzheng.mp3">
+        </audio>
+    </div>
+    <footer class="fontstyleT">
+        <p style="color: ivory;">Author: Michael Sun<br>
+            Email: zsun1@babson.edu</p>
+    </footer>
+</body>
+
+</html>
