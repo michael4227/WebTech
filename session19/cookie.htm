@@ -3,10 +3,10 @@
 	<title>The Current Time</title>
 
 	<script>
-        //Get today's date
-        var today = new Date()
     function setCookie(cName, cValue)
     {
+        //Get today's date
+        var today = new Date()
         //Create a date 1 year from now
         var expireDate = 
             new Date(today.getFullYear()+1, today.getMonth(), today.getDate())
@@ -37,7 +37,7 @@
 	</script>
 </head>
 
-<body data-new-gr-c-s-check-loaded="9.41.0" data-gr-ext-installed="">
+<body onload='display()' data-new-gr-c-s-check-loaded="9.41.0" data-gr-ext-installed="">
     <p id='lv'></p>
     <p></p>
 </body></html>
