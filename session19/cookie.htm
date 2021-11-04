@@ -1,0 +1,43 @@
+<html lang="en"><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+	<title>The Current Time</title>
+
+	<script>
+        //Get today's date
+        var today = new Date()
+    function setCookie(cName, cValue)
+    {
+        //Create a date 1 year from now
+        var expireDate = 
+            new Date(today.getFullYear()+1, today.getMonth(), today.getDate())
+        
+        //Create a new cookie that exprires a year from now
+        document.cookie = cName + "=" + cValue + 
+        ";expires="+ expireDate.toGMTString() 
+    }
+    function readCookie(cName)
+    {
+        c=document.cookie  //Gets all cookies in the document
+        var s=c.indexOf(cName) //s is the index of the start of the desired cookie
+        if (s==-1) return null;
+        var cs=c.substring(s) //Cut the cookie string at the start of the desired cookie
+        var e=cs.indexOf(";") //e is the index of the end of the desired cookie
+        //If there are multiple cookies, cut off the others
+        if (e != -1) {
+        cs = cs.substring(0,e)
+        }
+        //Find and return the value of the desired cookie
+        cookieParts=cs.split("=")
+        return cookieParts[1]
+    }
+    function display(){
+        if(document.getElementById('lv').innerHTML = today) document.getElementById('lv').innerHTML = 'no first visit';
+        else document.getElementById('lv').innerHTML = today
+    }
+	</script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="9.41.0" data-gr-ext-installed="">
+    <p id='lv'></p>
+    <p></p>
+</body></html>
