@@ -29,12 +29,20 @@
 			else if (document.getElementById('grad').value=='')
 				alert('Graduation Year is required')
 			else if (document.getElementById('grad').value < 2021 || document.getElementById('grad').value > 2024)
-				alert('Graduation Year must be between 2021 and 2024')
+				{alert('Graduation Year must be between 2021 and 2024')
+				document.getElementById('grad').focus();
+				document.getElementById('grad').value='';
+			}
+
 			else
 			{
 				return true;
 			}
 			return false;
+		}
+		function writegy(){
+			var gy = 10*Math.floor(Math.random()*5)
+			document.getElementById('writegy').innerHTML=gy;
 		}
 
 	</script>
@@ -76,5 +84,7 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<input type="reset" value="Reset" name="Reset">
 	</form>
+
+	<p onclick="writegy()">your graduation year is...<span id='writegy'>11</span></p>
 </body>
 </html>
