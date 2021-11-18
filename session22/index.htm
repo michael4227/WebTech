@@ -14,6 +14,20 @@
 	<script>
 	$(function(){
 	   // jQuery methods go here...
+	   $(function(){
+  $("#ho").click(function(){
+   $("#1,#3").hide()
+  })
+  $("tr").click(function(){
+  $(this).fadeOut(3000) })
+
+  $("#sa").click(function(){
+   $("tr").show()
+   $("tr:even").css("background-color","yellow")
+   
+  })
+
+ });
 
 	});
 	/* Your additional JavaScript goes here */
@@ -22,10 +36,10 @@
 
   <body>
 	<table>
-	<tr><td>Row 1</td></tr>
-	<tr><td>Row 2</td></tr>
-	<tr><td>Row 3</td></tr>
-	<tr><td>Row 4</td></tr>
+	<tr id='1'><td>Row 1</td></tr>
+	<tr id='2'><td>Row 2</td></tr>
+	<tr id='3'><td>Row 3</td></tr>
+	<tr id='4'><td>Row 4</td></tr>
 	</table>
 	   <button id="ho" onclick=''>Hide Odd</button>
 	   <button id="sa" onclick=''>Show All</button>
