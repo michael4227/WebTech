@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Page title goes here</title>
+
+	<style>
+#panel, #flip {
+  padding: 10px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+#panel {
+  padding: 100px;
+  display: none;
+}
+
+.blue {color: blue;}
+	</style>
+	
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+  $("#toggle").click(function(){
+    $("p").toggle();
+});
+})
+
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#test1").text("<b>Hi</b>");
+  });
+  $("#btn2").click(function(){
+    $("#test1").html("<b>Ho</b>");
+  });
+});
+
+$(document).ready(function(){
+  $("#btn3").click(function(){
+    $("#test2").append($('#test2').html());
+  });
+  $("#btn4").click(function(){
+    $("#test2").html(document.getElementById('test1').innerHTML);
+  });
+  $("#btn5").click(function(){
+    $("#test2").prepend($('#test1').html());
+  });
+});
+
+$(document).ready(function(){
+    $("#rm").click(function(){
+        $("#sth").remove();
+    });
+});
+
+$(document).ready(function(){
+  $("#toggleclass").click(function(){
+    $("p").toggleClass("blue");
+  });
+});
+
+$(document).ready(function(){
+  $("#animation").click(function(){
+    $("#texthi").animate({left: '250px'});
+    $("#textha").delay(300).animate({left: '250px'});
+  });
+});
+    </script>
+    </head>
+<body>
+
+<p>Try the Buttons</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="toggle">Toggle</button>
+
+<hr>
+
+<div id="flip">Click to slide up and down the panel</div>
+<div id="panel">^_^</div>
+
+<hr>
+<p id="test1">This is some <b>bold</b> text in a paragraph.</p>
+
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+<hr>
+
+<p id="test2">This is some <b>bold</b> text in a paragraph.</p>
+<button id="btn3">Double what's inside</button>
+<button id="btn4">Get the Above</button>
+<button id="btn5">Prepend the Above</button>
+<hr>
+
+<p id='sth'>STH</p>
+<button id='rm'>remove sth</button>
+<hr>
+
+<button id='toggleclass'>toggle blue</button>
+<hr>
+<p id='texthi' style="position: absolute; padding-top: 20px;">hihihi</p>
+<p id='textha' style="position: absolute; padding-top: 40px;">hahaha</p>
+<button id='animation'>move text</button>
+
+</body>
+</html>
