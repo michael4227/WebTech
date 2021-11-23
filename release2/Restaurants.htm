@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael's Boston Experience</title>
     <link rel="stylesheet" type="text/css" href="test.css" />
+    <script>
+        var w = window.innerWidth;
+        function centerText()
+        {
+            document.getElementById('d1').marginLeft=(0.9*w-780)/2+'px'
+        }
+    </script>
     <style>
         .Nav_Bar ul {
             list-style-type: none;
@@ -70,13 +77,13 @@
         .picleft {
             width: 500px;
             height: 400px;
-            padding-left: 200px;
+            padding-left: 10%;
         }
 
         .picright {
             width: 500px;
             height: 400px;
-            padding-right: 200px;
+            padding-right: 10%;
         }
 
         .section {
@@ -89,7 +96,7 @@
     </style>
 </head>
 
-<body>
+<body onload='centerText()'>
     <h1 class='fontstyleT1'>Michael's Boston Experience</h1>
     <div class="Nav_Bar">
         <ul>
@@ -133,9 +140,8 @@
             spicy flavored dishes. This place cooks authentic chinese food. Click the picture to be directed to their
             official site to see the menu.
         </p>
-    </div>
         <div
-            style="float: left; width: 280px; border-style: dotted; border-width:  3px; border-color:aliceblue; margin-left: 350px; margin-right: 300px; margin-top: 30px;">
+            id='d1' style="float: left; width: 280px; border-style: dotted; border-width:  3px; border-color:aliceblue; margin-top: 30px;">
             <ol style="color: cornsilk; list-style-position:inside; text-align: left;">
                 <li>Address:
                     <ul>
@@ -169,7 +175,7 @@
             recommended.
         </p>
         <div
-            style="float: left; width: 380px; border-style: dotted; border-width:  3px; border-color:aliceblue; margin-left: 285px; margin-right: 200px; margin-top: 30px;">
+            style="float: left; width: 380px; border-style: dotted; border-width:  3px; border-color:aliceblue; margin-left: 28%; margin-right: 20%; margin-top: 30px;">
             <ol style="color: cornsilk; list-style-position:outside; text-align: left;">
                 <li>Address:
                     <ul>
@@ -202,7 +208,7 @@
             Operation Hours is incredibly long.
         </p>
         <div
-            style="float: left; width: 280px; border-style: dotted; border-width:  3px; border-color:aliceblue; margin-left: 350px; margin-right: 300px; margin-top: 30px;">
+            style="float: left; width: 280px; border-style: dotted; border-width:  3px; border-color:aliceblue; margin-left: 35%; margin-right: 30%; margin-top: 30px;">
             <ol style="color: cornsilk; list-style-position:inside; text-align: left;">
                 <li>Address:
                     <ul>
