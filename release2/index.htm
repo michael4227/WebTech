@@ -20,26 +20,25 @@
 <!-- jQuery -->
 <!-- The first jQuery I included is on the Credit page. Clicking the "Honor Code" title would toggle the honor code content-->
 <!-- The second jQuery I included is on the index page(home page). I created button named 'Remove the Span' that could remove the animation'Time Flies'-->
-<!-- The third jQuery I included is on the index page as well. Clicking the first line "20190818" title would toggle the text that follows; clicking the title (Michael's Boston Experience) would show the hidden text again -->
+<!-- The third jQuery I included is on the index page as well. Clicking the first line "20190818" title would toggle the text that follows; clicking the title (Michael's Boston Experience)would show the hidden text again -->
 <!-- The fourth jQuery I included is on the AboutMe page. If the showslide animation is clicked, the emoji on the right side(&#128516;) would be replaced by another emoji(&#128514;)-->
 
 <!-- Release 1 Recovery-->
 <!-- The github pushing error regarding to lowercase/uppercase issue is fixed by erasing all documents in release 1 and re-pushing them to github.
 #Todo: The restaurant page centering issue is still unsolved
-----"Design: 9/11. On GitHub Pages, many images do not appear on the Short Holiday Plans page. The Restaurants page does not render properly."" -->
+-"Design: 9/11. On GitHub Pages, many images do not appear on the Short Holiday Plans page. The Restaurants page does not render properly."" -->
 <!-- I updated the <meta> names for each htm documents into brief descriptions of the page, and changed the title to correspond with the htm documents' names
-----SEO: 0/4. There were no description or key words meta tags, and <title> was the same on every page.  -->
+-SEO: 0/4. There were no description or key words meta tags, and <title> was the same on every page.-->
 
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="The home page of Michael's website">
+    <meta name="description" content="Home Page, Index Page, Timeline, Outline">
     <title>Michael's Boston Experience</title>
-    <link rel="stylesheet" type="text/css" href="test.css" />
+    <link rel="stylesheet" type="text/css" href="test.css"/>
     <style>
         .Nav_Bar ul {
             list-style-type: none;
@@ -110,21 +109,13 @@
 		// ]]>
         $(document).ready(function(){
             $("#removewords").click(function(){
-                $("#tf").remove();
-    });
-});
-$(document).ready(function(){
+                $("#tf").remove();});});
+        $(document).ready(function(){
             $("#hidetl").click(function(){
-                $("#tldiv").slideToggle();
-    });
-});
-$(document).ready(function(){
+                $("#tldiv").slideToggle();});});
+        $(document).ready(function(){
             $("#heading").click(function(){
-                $("#tldiv").show();
-    });
-});
-        var img = document.createElement("img");
-        img.src = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/time-flies-peter-cakovsky.jpg";
+                $("#tldiv").show();});});
         function chgpic(){
             document.getElementById('tf').innerHTML= 'Two Years have passed'
             document.getElementById('tf').style.fontSize = "60px"
