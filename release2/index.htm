@@ -1,3 +1,4 @@
+<!-- RELEASE 1 -->
 <!-- The table tag can be found at the bottom of this page, the Activity page, the Apps page and the SP page  -->
 <!-- The list tag can be found at both the FoodSubbplies sub-page and Others sub-page of the Shops page, and the AboutMe page -->
 <!-- The image map tag can be found at the Shops page -->
@@ -6,13 +7,37 @@
 <!-- I made a change in the content of one sub-page of the Activities page. The original plan was including kayaking, strolling and rock climbing. Now I changed Rock-climbing into Skiing-->
 <!-- I deleted the sub-pages for the Restaurant page; instead, I decided to include all three restaurants in the Restaurant main page-->
 
+<!-- RELEASE 2 -->
+<!-- JAVASCRIPT -->
+<!-- Javascript change text can be found at the index page(homepage), it is used to change the span "time flies" into "Two years have passed"
+    Javascript change style is also in the same function: the text color is changed to orange and the the size of the font is changed to 60px. These changes can be seen after clicking the span-->
+<!-- The form validation can be found at the contact page. If the first/last name or email is not filled out, there would be an alert pop out-->
+<!-- The javascript image change can be found on the activity page. If hovering over the small pictures above or below the video, the map screen shot of the location would be shown-->
+<!-- The animation of a slideshow can be found at the AboutMe page. The three pictures is alterating on the left every 5 seconds -->
+<!-- The animation about the size of font can be seen at the index page(homepage) at the span of'Time Flies', the stop button is used to stop the animation-->
+<!-- The ramdomness can be found at the Credit page, where the background color of the honor code is changing everytime. There are 6 colors that could be selected ramdomly using Math.random -->
+
+<!-- jQuery -->
+<!-- The first jQuery I included is on the Credit page. Clicking the "Honor Code" title would toggle the honor code content-->
+<!-- The second jQuery I included is on the index page(home page). I created button named 'Remove the Span' that could remove the animation'Time Flies'-->
+<!-- The third jQuery I included is on the index page as well. Clicking the first line "20190818" title would toggle the text that follows; clicking the title (Michael's Boston Experience) would show the hidden text again -->
+<!-- The fourth jQuery I included is on the AboutMe page. If the showslide animation is clicked, the emoji on the right side(&#128516;) would be replaced by another emoji(&#128514;)-->
+
+<!-- Release 1 Recovery-->
+<!-- The github pushing error regarding to lowercase/uppercase issue is fixed by erasing all documents in release 1 and re-pushing them to github.
+#Todo: The restaurant page centering issue is still unsolved
+----"Design: 9/11. On GitHub Pages, many images do not appear on the Short Holiday Plans page. The Restaurants page does not render properly."" -->
+<!-- I updated the <meta> names for each htm documents into brief descriptions of the page, and changed the title to correspond with the htm documents' names
+----SEO: 0/4. There were no description or key words meta tags, and <title> was the same on every page.  -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page of Michael's website">
     <title>Michael's Boston Experience</title>
     <link rel="stylesheet" type="text/css" href="test.css" />
     <style>
@@ -75,10 +100,71 @@
             transform: rotate(357deg);
         }
     </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        // <![CDATA[  
+		var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+		if (mobile) {
+			document.location = "projectMobile.htm"
+		}
+		// ]]>
+        $(document).ready(function(){
+            $("#removewords").click(function(){
+                $("#tf").remove();
+    });
+});
+$(document).ready(function(){
+            $("#hidetl").click(function(){
+                $("#tldiv").slideToggle();
+    });
+});
+$(document).ready(function(){
+            $("#heading").click(function(){
+                $("#tldiv").show();
+    });
+});
+        var img = document.createElement("img");
+        img.src = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/time-flies-peter-cakovsky.jpg";
+        function chgpic(){
+            document.getElementById('tf').innerHTML= 'Two Years have passed'
+            document.getElementById('tf').style.fontSize = "60px"
+            document.getElementById('tf').style.color = '#FD7F20'
+        }
+
+        var fz=0
+        function resize()
+        {
+            fz=fz+1;
+            tf=document.getElementById("tf");
+            tf.style.fontSize=fz+"pt";
+            if (fz<250) 
+                a = setTimeout("resize();",30);
+            else
+                b = setTimeout("smallsize();",30);
+        }
+        
+        
+        function smallsize()
+        {
+            fz=fz-1;
+            tf=document.getElementById("tf");
+            tf.style.fontSize=fz+"pt";
+            if (fz>40) 
+                c = setTimeout("smallsize();",30);
+            else
+                d = setTimeout("resize();",30);
+            }
+        function stopfunction(){
+            clearTimeout(a)
+            clearTimeout(b)
+            clearTimeout(c)
+            clearTimeout(d)
+        }
+    </script>
 </head>
 
-<body>
-    <h1 class='fontstyleT1'>Michael's Boston Experience</h1>
+<body onload='resize()'>
+    <h1 class='fontstyleT1' id='heading'>Michael's Boston Experience</h1>
     <div class="Nav_Bar">
         <ul>
             <li><a href="index.htm" class="Active">Home</a></li>
@@ -108,13 +194,18 @@
 
         </ul>
     </div>
-    <p style="width: 100%; font-size: 72px; text-align: center; float: unset" class='fontstyleT2'> 2019.08.18 <br> I
-        came to Boston to go to <a href='https://www.babson.edu' target="_blank"><img
-                src="https://fundingsage.com/wp-content/uploads/2017/05/559719_10151452694010179_1290842650_n.jpg"
-                alt="BabsonCollege" width="80" height="50"></a> <br> &bull; <br> &bull; <br> 2020.02 <br> COVID-19 <br>
-        &bull; <br> &bull; <br> 2021.10 <br> Birth of This Website <br> &bull; <br> &bull; <br> 2022.05 <br> End of My
-        College Experience <br> <span class='word500px' style="color:rgb(28, 211, 243);">TIME FLIES!</span> </p>
-
+    <div id='tldiv'>
+        <p style="width: 100%; font-size: 72px; text-align: center; float: unset" class='fontstyleT2'> <span id='hidetl' style="color: rgb(35, 206, 212);">2019.08.18</span><br> I
+            came to Boston to go to <a href='https://www.babson.edu' target="_blank"><img
+                    src="https://fundingsage.com/wp-content/uploads/2017/05/559719_10151452694010179_1290842650_n.jpg"
+                    alt="BabsonCollege" width="80" height="50"></a> <br> &bull; <br> &bull; <br> 2020.02 <br> COVID-19 <br>
+            &bull; <br> &bull; <br> 2021.10 <br> Birth of This Website <br> &bull; <br> &bull; <br> 2022.05 <br> End of My
+            College Experience <br> <span id='tf' onclick=chgpic() class='word500px' style="color:rgb(28, 211, 243);">TIME FLIES!</span> </p>
+            <div style='text-align: center;'>
+            <button type="button" id='stop' onclick='stopfunction()'>Stop Animation</button>
+            <button type="button" id='removewords'>Remove the Span</button>
+            </div>
+    </div>
     <h2 class='fontstyleT2' style="text-align: center;">This website shares my 2-years living experience at Boston.
         Pictures below are some of my good memories.</h2>
     <div class='structure'>
@@ -153,7 +244,7 @@
                     Ethics</strong> in this work and pledge to be better than that which would compromise my
                 integrity.”</em></p>
         <audio controls autoplay class='audio' style="float: right;">
-            <source src="Guzheng.mp3" type="audio/mpeg">
+            <source src="relaxingbgm.mp3" type="audio/mpeg">
         </audio>
     </div>
     <footer class="fontstyleT">

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael's Boston Experience</title>
+    <meta name="description" content="Credits, intellectual properties">
+    <title>Credit</title>
     <link rel="stylesheet" type="text/css" href="test.css" />
     <style>
         .Nav_Bar ul {
@@ -67,9 +67,24 @@
             transform: rotate(357deg);
         }
     </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hcttl").click(function(){
+                $("#hcctt").slideToggle("slow");
+            });
+        });
+        function ChgColor() 
+        {
+            var bgColors = new Array("rgba(182, 206, 200, 0.55)","rgba(60, 60, 200, 0.55)","rgba(150, 30, 210, 0.55)","rgba(180, 180, 10, 0.55)","rgba(50, 2, 200, 0.55)","rgba(130, 236, 120, 0.55)");
+            document.getElementById("hc").style.backgroundColor=bgColors[Math.floor(Math.random()*bgColors.length)];
+            setTimeout("ChgColor()",1000);
+        }
+
+	</script>	
 </head>
 
-<body>
+<body onload='ChgColor()'>
     <h1 class='fontstyleT1'>Michael's Boston Experience</h1>
     <div class="Nav_Bar">
         <ul>
@@ -100,14 +115,16 @@
 
         </ul>
     </div>
-    <div class="fontstyleT"
-        style="background-color: rgba(182, 206, 200, 0.55); background-blend-mode:darken; color: rgb(35, 206, 212);">
-        <p>Honor Code</p>
-        <p style="color: silver; float: left;"><em>“I have abided by the <strong><span>Babson</span> Code of
+    <div class="fontstyleT" id = 'hc'
+        style="background-color: rgba(182, 206, 200, 0.55); background-blend-mode:darken; font-size: 50px;">
+        <p>"All intellectual property at this website is in the public domain or the property of the site owner."</p> 
+        <p id='hcttl'>Honor Code<span style="font-size: 20px; color: rgb(28, 211, 243);">(click to toggle)</span></p>
+        <p id='hcctt'><br><em>
+        “I have abided by the <strong><span>Babson</span> Code of
                     Ethics</strong> in this work and pledge to be better than that which would compromise my
                 integrity.”</em></p>
         <audio controls autoplay class='audio' style="float: right;">
-            <source src="Guzheng.mp3">
+            <source src="relaxingbgm.mp3">
         </audio>
     </div>
     <footer class="fontstyleT">

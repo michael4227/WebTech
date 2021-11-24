@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael's Boston Experience</title>
+    <meta name="description" content="Reaching out to Michael">
+    <title>Contacts</title>
     <link rel="stylesheet" type="text/css" href="test.css" />
     <style>
         .Nav_Bar ul {
@@ -67,6 +67,36 @@
             transform: rotate(357deg);
         }
     </style>
+    <script>
+        function processForm(){ 
+            var jsfname=document.getElementById("jsfname");
+            var jslname=document.getElementById("jslname");
+            var jsm=document.getElementById("jsm");
+            var jsf=document.getElementById("jsf");
+            if (jsfname.value=="")
+            {
+                alert("First name is required");
+                jsfname.focus();
+            }
+            else if (jslname.value=='')
+            {
+                alert("Last name is required");
+                jslname.focus();
+            }
+            else if (jsm.checked == false && jsf.checked == false)
+            {
+                alert("Gender is required");
+            }
+            else if (document.getElementById('email').value=='')
+                alert('Please put in your email so I can get back to you')
+
+            else
+            {
+                return true;
+            }
+            return false;
+            }
+    </script>
 </head>
 
 <body>
@@ -105,11 +135,11 @@
         If you want to reach out to me, please fill out this form. I will reply you as soon as I see the message</p>
     <div class='fontstyleT'>
     <!-- I changed the mailer email address in the mailer php document -->
-        <form method="POST" action="http://wtspring13sec2.babson.edu/gordon/mailer.php">
-            <label for='firstname'>First Name: (required)</label> <input type= "text" id = "firstname" maxlength="100" required> 
-            <label for='lastname'>Last Name: (required)</label><input type= "text" id="lastname" maxlength="100" required>
-            <p>Gender: Male <input type="radio" name="gender" value="male" /> Female <input type="radio" name="gender" value="female" checked="checked" /></p>
-            <p>Your Email Address: (required) <input type= "text" name="Email" maxlength="100" required>
+        <form method="POST" action="http://wtspring13sec2.babson.edu/gordon/mailer.php" onsubmit='return processForm()'>
+            <label for='firstname'>First Name: (required)</label> <input type= "text" id = "jsfname" maxlength="100"> 
+            <label for='lastname'>Last Name: (required)</label><input type= "text" id="jslname" maxlength="100">
+            <p>Gender: Male <input type="radio" name="gender" id= 'jsm' value="male" /> Female <input type="radio" name="gender" id='jsf' value="female" checked="checked" /></p>
+            <p>Your Email Address: (required) <input type= "text" name="Email" id='email' maxlength="100">
             <p>Do you like the design of this website?</p>
             <select name='like/dislike'>
                 <option value="A">Really like</option>
@@ -150,7 +180,7 @@
                     Ethics</strong> in this work and pledge to be better than that which would compromise my
                 integrity.”</em></p>
         <audio controls autoplay class='audio' style="float: right;">
-            <source src="Guzheng.mp3">
+            <source src="relaxingbgm.mp3">
         </audio>
     </div>
     <footer class="fontstyleT">
