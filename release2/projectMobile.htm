@@ -96,12 +96,6 @@
     </style>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script>
-        // <![CDATA[  
-		var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-		if (mobile) {
-			document.location = "projectMobile.htm"
-		}
-		// ]]>
         $(document).ready(function(){
             $("#removewords").click(function(){
                 $("#tf").remove();
@@ -158,8 +152,8 @@ $(document).ready(function(){
 </head>
 
 <body onload='resize()'>
-    <h1 class='fontstyleT1' id='heading'>Michael's Boston Experience</h1>
-    <div class="Nav_Bar">
+    <h1 class='fontstyleT1' id='heading' style="width: 1660px; text-align: center;">Michael's Boston Experience</h1>
+    <div class="Nav_Bar" style="width: 1660px;">
         <ul>
             <li><a href="index.htm" class="Active">Home</a></li>
             <li class="Dropdown">
@@ -189,18 +183,18 @@ $(document).ready(function(){
         </ul>
     </div>
     <div id='tldiv'>
-        <p style="width: 100%; font-size: 72px; text-align: center; float: unset" class='fontstyleT2'> <span id='hidetl' style="color: rgb(35, 206, 212);">2019.08.18</span><br> I
+        <p style="width: 1660px; font-size: 72px; text-align: center; float: unset" class='fontstyleT2'> <span id='hidetl' style="color: rgb(35, 206, 212);">2019.08.18</span><br> I
             came to Boston to go to <a href='https://www.babson.edu' target="_blank"><img
                     src="https://fundingsage.com/wp-content/uploads/2017/05/559719_10151452694010179_1290842650_n.jpg"
                     alt="BabsonCollege" width="80" height="50"></a> <br> &bull; <br> &bull; <br> 2020.02 <br> COVID-19 <br>
             &bull; <br> &bull; <br> 2021.10 <br> Birth of This Website <br> &bull; <br> &bull; <br> 2022.05 <br> End of My
-            College Experience <br> <span id='tf' onclick=chgpic() class='word500px' style="color:rgb(28, 211, 243);">TIME FLIES!</span> </p>
-            <div style='text-align: center;'>
+            College Experience <br> <span id='tf' onclick=chgpic() style="color:rgb(28, 211, 243);font-size: 300px; text-align: center;">TIME FLIES!</span> </p>
+            <div style='text-align: center;width: 1660px;'>
             <button type="button" id='stop' onclick='stopfunction()'>Stop Animation</button>
             <button type="button" id='removewords'>Remove the Span</button>
             </div>
     </div>
-    <h2 class='fontstyleT2' style="text-align: center;">This website shares my 2-years living experience at Boston.
+    <h2 class='fontstyleT2' style="text-align: center; width: 1660px;">This website shares my 2-years living experience at Boston.
         Pictures below are some of my good memories.</h2>
     <div class='structure'>
         <table style="margin-left: auto; margin-right: auto">
@@ -232,7 +226,7 @@ $(document).ready(function(){
         </table>
     </div>
     <div class="fontstyleT"
-        style="background-color: rgba(182, 206, 200, 0.55); background-blend-mode:darken; color: rgb(35, 206, 212);">
+        style="background-color: rgba(182, 206, 200, 0.55); background-blend-mode:darken; width: 1660px; color: rgb(35, 206, 212);">
         <p>Honor Code</p>
         <p style="color: silver; float: left;"><em>“I have abided by the <strong><span>Babson</span> Code of
                     Ethics</strong> in this work and pledge to be better than that which would compromise my
@@ -241,7 +235,7 @@ $(document).ready(function(){
             <source src="relaxingbgm.mp3" type="audio/mpeg">
         </audio>
     </div>
-    <footer class="fontstyleT">
+    <footer class="fontstyleT" style="width: 1660px;">
         <p style="color: ivory;">Author: Michael Sun<br>
             Email: zsun1@babson.edu</p>
     </footer>
