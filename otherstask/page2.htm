@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 
-<html lang="en"> 
+<html lang="en">
 
-  <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>Page 2</title>
 
 	<style>
-	/* Your styles go here */
-	img {width:150px; height:100px; margin-left:0px}
-	p {text-align:center}
-    #p1 {width:150px; height:150px; background-color:azure; border:2px solid red}
-	button {margin:23px}
+		/* Your styles go here */
+		img {
+			width: 150px;
+			height: 100px;
+			margin-left: 0px
+		}
+
+		p {
+			text-align: center
+		}
+
+		#p1 {
+			width: 150px;
+			height: 150px;
+			background-color: azure;
+			border: 2px solid red
+		}
+
+		button {
+			margin: 23px
+		}
 	</style>
-	
+
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script>
-	$(function(){
-	   // jQuery methods go here...
-
-	});
+        // <![CDATA[  
+		var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+		if (mobile) {
+			document.location = "page2mobile.htm"
+		}
+		// ]]>
+		// jQuery methods go here...
+		$(document).ready(function () {
+			$("#eimg").animate({ left: '420px' }, 3000);
+			$("#eimg").delay(2000).animate({ left: '0px' }, 3000)
+		});
+		$(document).ready(function () {
+			$("#bt1").click(function(){
+				$("#bt1").hide(3000);$('#p1').animate({width:'300px'},3000)
+		});});
+		$(document).ready(function () {
+			$("#bt2").click(function(){
+				$("#bt2").hide(3000);$('#p1').delay(3000).animate({height:'300px'},3000)
+		});});
 	/* Your additional JavaScript goes here */
-	</script>
-  </head>
-
-  <body>
-	<img src="elephant.jpg" alt="elephant"/>
-      <p id="p1">Elephant</p>
-	<p><button>Button 1</button><button>Button 2</button></p>
 	
-  </body>
+	</script>
+</head>
+
+<body>
+	<img src="elephant.jpg" alt="elephant" id='eimg' style="position: absolute;"/>
+	<p id="p1">Elephant</p>
+	<p><button id='bt1'>Button 1</button><button id='bt2'>Button 2</button></p>
+
+</body>
+
 </html>
